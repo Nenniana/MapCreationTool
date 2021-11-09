@@ -31,21 +31,6 @@ public class TilemapObject
         return sprite;
     }
 
-    public string GetSOName()
-    {
-        return sOName;
-    }
-
-    public Vector3 GetLocation ()
-    {
-        return new Vector3(x, y);
-    }
-
-    public GridBase<TilemapObject> GetGridBase ()
-    {
-        return gridBase;
-    }
-
     public override string ToString()
     {
         if (string.IsNullOrEmpty(sOName))

@@ -44,12 +44,9 @@ public class Tilemap
         return gridBase.GetLayer();
     }
 
-    public TilemapObject GetCurrenttilemapObject()
+    public void UpdateTilemapVisual (TilemapVisual tilemapVisual)
     {
-        if (currenttilemapObject != null)
-            return currenttilemapObject;
-        else
-            return null;
+        tilemapVisual.ChangeGrid(this, gridBase);
     }
 
     public void SetTilemapVisual (TilemapVisual tilemapVisual)
@@ -72,7 +69,6 @@ public class Tilemap
         public Vector3 location;
         public int layer;
         public TilemapObject.SaveObject[] tilemapObjectSaveObjectArray;
-        
     }
 
     public SaveObject Save ()
@@ -106,16 +102,12 @@ public class Tilemap
     {
         foreach (TilemapObject.SaveObject tilemapObjectSaveObject in saveObject.tilemapObjectSaveObjectArray) 
         {
+            
             TilemapObject tilemapObject = gridBase.GetGridObject(tilemapObjectSaveObject.x, tilemapObjectSaveObject.y);
             tilemapObject.Load(tilemapObjectSaveObject);
+            gridBase.TriggerGridBaseObjectChanged(tilemapObjectSaveObject.x, tilemapObjectSaveObject.y);
         }
 
         OnLoaded?.Invoke(this, EventArgs.Empty);
-    }
-
-    public void Clear()
-    {
-        gridBase.Clear();
-        gridBase = null;
     }
 }

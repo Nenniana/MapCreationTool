@@ -9,7 +9,7 @@ public abstract class ScriptableTileBase : ScriptableObject
     [SerializeField]
     private Sprite prefabSprite;
     [SerializeField]
-    private string prefabAbbr;
+    private string description = "Fill me!";
     [SerializeField]
     private bool canBuild = false;
     [SerializeField]
@@ -32,6 +32,6 @@ public abstract class ScriptableTileBase : ScriptableObject
 
     public string GetPrefabAbbr()
     {
-        return prefabAbbr;
+        return description;
     }
 }

@@ -14,6 +14,7 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public static class SaveSystem {
 
@@ -58,6 +59,23 @@ public static class SaveSystem {
         }
     }
 
+    public static List<string> GetSavedFileNames()
+    {
+        Init();
+        DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
+        // Get all save files
+        FileInfo[] saveFiles = directoryInfo.GetFiles("*." + SAVE_EXTENSION);
+
+        List<string> dropOptions = new List<string>();
+
+        foreach (FileInfo fileInfo in saveFiles)
+        {
+            dropOptions.Add(fileInfo.Name);
+        }
+
+        return dropOptions;
+    }
+
     public static string LoadMostRecentFile() {
         Init();
         DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
@@ -84,8 +102,16 @@ public static class SaveSystem {
         }
     }
 
-    public static void SaveObject(object saveObject) {
-        SaveObject("save", saveObject, false);
+    public static void SaveObject(object saveObject, string name) {
+
+        string saveName;
+
+        if (string.IsNullOrEmpty(name))
+            saveName = "save";
+        else
+            saveName = name;
+
+        SaveObject(saveName, saveObject, false);
     }
 
     public static void SaveObject(string fileName, object saveObject, bool overwrite) {

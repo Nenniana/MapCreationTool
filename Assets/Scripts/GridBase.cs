@@ -19,6 +19,7 @@ public class GridBase<TGridBaseObject>
     private int layer;
     private TGridBaseObject[,] gridArray;
     private bool showDebug = true;
+    private TextMesh[,] debugTextArray;
 
     public GridBase (int width, int height, float cellSizeX, float cellSizeY, Func<GridBase<TGridBaseObject>, int, int, TGridBaseObject> createGridBaseObject, Vector3 originPosition = default, int layer = 1)
     {
@@ -41,7 +42,7 @@ public class GridBase<TGridBaseObject>
 
         if (showDebug)
         {
-            TextMesh[,] debugTextArray = new TextMesh[width, height];
+            debugTextArray = new TextMesh[width, height];
 
             for (int x = 0; x < gridArray.GetLength(0); x++)
             {
@@ -56,11 +57,13 @@ public class GridBase<TGridBaseObject>
             Debug.DrawLine(GetWorldPosition(0, height), GetWorldPosition(width, height), Color.white, 100f);
             Debug.DrawLine(GetWorldPosition(width, 0), GetWorldPosition(width, height), Color.white, 100f);
 
-            OnGridValueChanged += (object sender, OnGridValueChangedEventArgs eventArgs) =>
-            {
-                debugTextArray[eventArgs.x, eventArgs.y].text = gridArray[eventArgs.x, eventArgs.y]?.ToString();
-            };
+            OnGridValueChanged += Grid_OnGridValueChanged;
         }
+    }
+
+    private void Grid_OnGridValueChanged(object sender, OnGridValueChangedEventArgs e)
+    {
+        debugTextArray[e.x, e.y].text = gridArray[e.x, e.y]?.ToString();
     }
 
     public int GetLayer()
@@ -123,6 +126,12 @@ public class GridBase<TGridBaseObject>
 
     public void Clear()
     {
+        foreach (var item in debugTextArray)
+        {
+            OnGridValueChanged -= Grid_OnGridValueChanged;
+            GameObject.Destroy(item);
+        }
+
         gridArray = null;
         showDebug = false;
     }

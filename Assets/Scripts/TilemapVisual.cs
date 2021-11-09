@@ -9,7 +9,7 @@ public class TilemapVisual : MonoBehaviour
     [SerializeField]
     private GameObject tile;
 
-    private Sprite sprite;
+    private int currentLayer;
     private SortedDictionary<int, List<GameObject>> layers;
     private List<GameObject> tiles;
     private GridBase<TilemapObject> gridBase;
@@ -22,11 +22,18 @@ public class TilemapVisual : MonoBehaviour
             return 0;
     }
 
-    public void SetGridBase (Tilemap tilemap, GridBase<TilemapObject> gridBase)
+    public void ChangeGrid (Tilemap tilemap, GridBase<TilemapObject> gridBase)
     {
         this.gridBase = gridBase;
+        currentLayer = tilemap.GetCurrentLayer();
+    }
+
+    public void SetGridBase (Tilemap tilemap, GridBase<TilemapObject> gridBase)
+    {
+        currentLayer = tilemap.GetCurrentLayer();
+        this.gridBase = gridBase;
         CreateTilemapArray();
-        UpdateTilemapVisual();
+        UpdateTilemapVisual(currentLayer);
 
         gridBase.OnGridValueChanged += Grid_OnGridValueChanged;
         tilemap.OnLoaded += Tilemap_OnLoaded;
@@ -34,26 +41,12 @@ public class TilemapVisual : MonoBehaviour
 
     private void Tilemap_OnLoaded(object sender, EventArgs e)
     {
-        UpdateTilemapVisual();
+        UpdateTilemapVisual(currentLayer);
     }
 
     private void Grid_OnGridValueChanged(object sender, GridBase<TilemapObject>.OnGridValueChangedEventArgs e)
     {
-        UpdateTilemapVisual();
-    }
-
-    public void Clear ()
-    {
-        gridBase.OnGridValueChanged -= Grid_OnGridValueChanged;
-
-        foreach (GameObject tile in tiles)
-        {
-            GameObject.Destroy(tile);
-        }
-
-        gridBase = null;
-        tiles = null;
-        layers = null;
+        UpdateTilemapVisual(currentLayer);
     }
 
     private void CreateTilemapArray()
@@ -68,8 +61,6 @@ public class TilemapVisual : MonoBehaviour
                 Transform currentTransform = currentTile.transform;
                 currentTransform.localPosition = gridBase.GetWorldPosition(x, y) + new Vector3(gridBase.GetCellSizeX(), gridBase.GetCellSizeY()) * 0.5f;
                 currentTransform.localScale = new Vector3(gridBase.GetCellSizeX(), gridBase.GetCellSizeY());
-                currentTile.GetComponent<TileVisualObject>().SetLocation(x, y);
-                currentTile.GetComponent<SpriteRenderer>().sprite = sprite;
                 tiles.Add(currentTile);
             }
         }
@@ -85,11 +76,11 @@ public class TilemapVisual : MonoBehaviour
         layers.Add(GetNextLayer() + 1, tiles);
     }
 
-    private void UpdateTilemapVisual ()
+    private void UpdateTilemapVisual(int layer)
     {
         Debug.Log("UpdateTilemapVisual was run!");
 
-        foreach (GameObject tile in tiles)
+        foreach (GameObject tile in layers[layer])
         {
             TilemapObject tilemapObject = gridBase.GetGridObject(tile.transform.localPosition - new Vector3(gridBase.GetCellSizeX(), gridBase.GetCellSizeY()) * 0.5f);
             tile.GetComponent<SpriteRenderer>().sprite = tilemapObject.GetSprite();

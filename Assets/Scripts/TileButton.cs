@@ -8,17 +8,24 @@ public class TileButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 {
     private Testing testing;
 
+    [SerializeField]
+    private TMPro.TextMeshProUGUI tMPro;
+
+    [SerializeField]
+    private Image image;
+
     private string sOName;
+    private string sOAbbr;
     private Sprite sprite;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("I'm being hovered: " + sOName);
+        TooltipSystem.Show(sOAbbr, sOName);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("I'm no longer being hovered: " + sOName);
+        TooltipSystem.Hide();
     }
 
     private void Start()
@@ -32,8 +39,9 @@ public class TileButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         this.sprite = sprite;
         this.sOName = sOName;
-        this.GetComponent<Image>().sprite = sprite;
-        this.GetComponentInChildren<Text>().text = sOAbbr;
+        this.sOAbbr = sOAbbr;
+        this.image.sprite = sprite;
+        tMPro.text = sOName;
     }
 
     private void SetSO ()
