@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d89ac843e647bc49af5c3452e7c1b86, type: 3}
-  m_Name: Start 2
+  m_Script: {fileID: 11500000, guid: a28dd69509036ce43a8d030306c0346f, type: 3}
+  m_Name: Hole Left
   m_EditorClassIdentifier: 
-  prefabName: Wall corner
+  prefabName: Hole left
   prefabObject: {fileID: 0}
-  prefabSprite: {fileID: -3049090555440275726, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+  prefabSprite: {fileID: 5601912596943171579, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
   description: Fill me!
-  prefabType: 1
+  prefabType: 3

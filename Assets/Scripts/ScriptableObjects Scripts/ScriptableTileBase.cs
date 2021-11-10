@@ -15,6 +15,11 @@ public abstract class ScriptableTileBase : ScriptableObject
     [SerializeField]
     internal TileType prefabType;
 
+    private void OnEnable()
+    {
+        prefabName = this.name;
+    }
+
     public TileType GetTileType ()
     {
         return prefabType;

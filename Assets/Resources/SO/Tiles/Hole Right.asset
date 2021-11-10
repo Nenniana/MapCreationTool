@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a28dd69509036ce43a8d030306c0346f, type: 3}
-  m_Name: Path 2
+  m_Name: Hole Right
   m_EditorClassIdentifier: 
-  prefabName: Hole bottom
+  prefabName: Hole Right
   prefabObject: {fileID: 0}
-  prefabSprite: {fileID: -8906266346092168406, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+  prefabSprite: {fileID: 7739663152385173795, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
   description: Fill me!
   prefabType: 3
