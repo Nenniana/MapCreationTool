@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f1a31df92a37c43af4211a6d4665cf, type: 3}
   m_Name: Default 1
   m_EditorClassIdentifier: 
-  prefabName: 
-  prefabSprite: {fileID: -8036227285139096098, guid: 27d1c4ad794e435448ee49f828b1f8f3, type: 3}
-  prefabAbbr: 
-  canBuild: 0
+  prefabName: Spikes
+  prefabObject: {fileID: 0}
+  prefabSprite: {fileID: 9131653592114336363, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+  description: Fill me!
   prefabType: 0

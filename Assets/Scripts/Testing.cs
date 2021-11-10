@@ -29,6 +29,7 @@ public class Testing : MonoBehaviour
     private Dictionary<int, Tilemap> tilemaps;
     private int brushSize = 1;
     private Vector3 cameraStart = new Vector3(100, 50, -10);
+    private bool showDebug = true;
 
     [SerializeField]
     private int gridWidth = 10;
@@ -54,16 +55,18 @@ public class Testing : MonoBehaviour
     private void OnLevelFinishedLoading(Scene arg0, LoadSceneMode mode)
     {
         SetLoadDropDown();
-
-        if (mode == LoadSceneMode.Single)
+        if (mode == LoadSceneMode.Single && LoadFileName.isLoading)
+        {
+            Debug.Log("Template loading.");
+            LoadScriptable(LoadFileName.LoadName);
+            LoadFileName.isLoading = false;
+        }
+        else
         {
             Debug.Log("Scene reset.");
-            
-            LoadScriptable(LoadFileName.LoadName);
+            SetUpTilemap(gridWidth, gridHeight, gridCellSizeX, gridCellSizeY, currentLocation, GetNewLayer());
         }
             
-        else
-            SetUpTilemap(gridWidth, gridHeight, gridCellSizeX, gridCellSizeY, currentLocation, GetNewLayer());
     }
 
 
@@ -150,6 +153,22 @@ public class Testing : MonoBehaviour
         AssetDatabase.Refresh();
     }
 
+    public void HideAllDebug ()
+    {
+        foreach (var item in tilemaps)
+        {
+            item.Value.GetGridBase().HideDebug();
+        }
+    }
+
+    public void ShowAllDebug()
+    {
+        foreach (var item in tilemaps)
+        {
+            item.Value.GetGridBase().ShowDebug();
+        }
+    }
+
     public void LoadScriptable(string saveName)
     {
         
@@ -183,13 +202,24 @@ public class Testing : MonoBehaviour
         dropdown.AddOptions(SODatabase.GetAllSaveNames());
     }
 
+    public bool IsEditingInputField()
+    {
+        GameObject currentFocus = EventSystem.current.currentSelectedGameObject;
+        if (currentFocus != null)
+        {
+            // returns true if current gameObject has input field in it
+            return currentFocus.TryGetComponent(out TMP_InputField _);
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     private void Update()
     {
-
-        bool IsEditingInputField = EventSystem.current.currentSelectedGameObject?.TryGetComponent(out TMP_InputField _) ?? false;
-
         DisplayCurrentTileObject();
-        if (!IsEditingInputField) 
+        if (!IsEditingInputField()) 
         {
             if (Input.GetMouseButton(0) && tilemaps != null && tilemaps.Count >= 1)
             {
@@ -207,9 +237,30 @@ public class Testing : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.L))
             {
                 //Debug.Log("dropdown.options[dropdownValue].text " + dropdown.options[dropdown.value].text);
+                LoadFileName.isLoading = true;
                 LoadFileName.LoadName = dropdown.options[dropdown.value].text;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                if (showDebug)
+                {
+                    HideAllDebug();
+                    showDebug = false;
+                } 
+                else
+                {
+                    ShowAllDebug();
+                    showDebug = true;
+                }
+            }
+
 
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
