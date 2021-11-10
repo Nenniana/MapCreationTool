@@ -30,8 +30,6 @@ public class Testing : MonoBehaviour
     private int brushSize = 1;
     private Vector3 cameraStart = new Vector3(100, 50, -10);
 
-    private int dropdownValue;
-
     [SerializeField]
     private int gridWidth = 10;
     [SerializeField]
@@ -43,18 +41,14 @@ public class Testing : MonoBehaviour
     [SerializeField]
     private int layerPadding = 10;
 
-    //private GridBase<MapObject> gridBase;
-    // Start is called before the first frame update
-    void Start()
-    {
-        brushSize = 1;
-        //SetUpTilemap(gridWidth, gridHeight, gridCellSizeX, gridCellSizeY, currentLocation, GetNewLayer());
-    }
-
     void OnEnable()
     {
-        //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
 
     private void OnLevelFinishedLoading(Scene arg0, LoadSceneMode mode)
@@ -72,11 +66,6 @@ public class Testing : MonoBehaviour
             SetUpTilemap(gridWidth, gridHeight, gridCellSizeX, gridCellSizeY, currentLocation, GetNewLayer());
     }
 
-    void OnDisable()
-    {
-        //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. Remember to always have an unsubscription for every delegate you subscribe to!
-        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-    }
 
     public Tilemap SetUpTilemap (int width, int height, float cellSizeX, float cellSizeY, Vector3 location, int layer)
     {
@@ -163,14 +152,21 @@ public class Testing : MonoBehaviour
 
     public void LoadScriptable(string saveName)
     {
-        Debug.Log("Loaded!");
-
-        ScriptableRoomTemplate scriptableRoomTemplate = SODatabase.GetSaveByName(saveName);
-
-        foreach (var tilemapSaveObject in scriptableRoomTemplate.roomLayers)
+        
+        if (saveName != "Select file to load")
         {
-            Tilemap tilemap = SetUpTilemap(scriptableRoomTemplate.roomWidth, scriptableRoomTemplate.roomHeight, scriptableRoomTemplate.roomCellSizeX, scriptableRoomTemplate.roomCellSizeY, tilemapSaveObject.location, tilemapSaveObject.layer);
-            tilemap.LoadScriptable(tilemapSaveObject);
+            Debug.Log("Loaded!");
+            ScriptableRoomTemplate scriptableRoomTemplate = SODatabase.GetSaveByName(saveName);
+
+            foreach (var tilemapSaveObject in scriptableRoomTemplate.roomLayers)
+            {
+                Tilemap tilemap = SetUpTilemap(scriptableRoomTemplate.roomWidth, scriptableRoomTemplate.roomHeight, scriptableRoomTemplate.roomCellSizeX, scriptableRoomTemplate.roomCellSizeY, tilemapSaveObject.location, tilemapSaveObject.layer);
+                tilemap.LoadScriptable(tilemapSaveObject);
+            }
+        }
+        else
+        {
+            Debug.Log("Did not load. Choose a file to load and try again.");
         }
     }
 
@@ -197,21 +193,20 @@ public class Testing : MonoBehaviour
         {
             if (Input.GetMouseButton(0) && tilemaps != null && tilemaps.Count >= 1)
             {
-                Debug.Log("Painting");
+                //Debug.Log("Painting");
                 Vector3 position = GetMouseWorldPostion.GetMouseWorldPosition();
                 tilemap.SetSOWithBrushSize(position, sprite, sOName, brushSize);
             }
 
             if (Input.GetKeyDown(KeyCode.S))
             {
-                //Save();
                 SaveScriptable();
                 Debug.Log("Saved!");
             }
 
             if (Input.GetKeyDown(KeyCode.L))
             {
-                Debug.Log("dropdown.options[dropdownValue].text " + dropdown.options[dropdown.value].text);
+                //Debug.Log("dropdown.options[dropdownValue].text " + dropdown.options[dropdown.value].text);
                 LoadFileName.LoadName = dropdown.options[dropdown.value].text;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
@@ -248,8 +243,6 @@ public class Testing : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.N))
             {
-                /*tilemap.Save();
-                Debug.Log("Saved!");*/
                 SetUpTilemap(gridWidth, gridHeight, gridCellSizeX, gridCellSizeY, currentLocation, GetNewLayer());
                 Debug.Log("Adding new tilemap!");
             }
