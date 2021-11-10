@@ -26,4 +26,53 @@ public static class SODatabase
             return tiles;
         }
     }
+
+    internal static Dictionary<string, ScriptableRoomTemplate> saves;
+    internal static Dictionary<string, ScriptableRoomTemplate> Saves
+    {
+        get
+        {
+            if (saves == null)
+            {
+                saves = new Dictionary<string, ScriptableRoomTemplate>();
+
+                List<ScriptableRoomTemplate> tileObjects = Resources.LoadAll("Saves", typeof(ScriptableRoomTemplate)).Cast<ScriptableRoomTemplate>().ToList();
+                foreach (ScriptableRoomTemplate tileObject in tileObjects)
+                {
+                    if (!saves.ContainsKey(tileObject.name))
+                        saves.Add(tileObject.name, tileObject);
+
+                }
+            }
+
+            return saves;
+        }
+    }
+
+    internal static ScriptableRoomTemplate GetSaveByName (string name)
+    {
+        Debug.Log("SaveName was: " + name);
+
+        foreach (var item in Saves)
+        {
+            Debug.Log("Names in database were" + item.Key);
+
+            if (name == item.Key)
+                Debug.Log("Match found!");
+        }
+
+        return Saves[name];
+    }
+
+    internal static List<string> GetAllSaveNames ()
+    {
+        List<string> names = new List<string>();
+
+        foreach (var item in Saves)
+        {
+            names.Add(item.Key);
+        }
+
+        return names;
+    }
 }

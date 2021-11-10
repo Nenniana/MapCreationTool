@@ -78,7 +78,7 @@ public class TilemapVisual : MonoBehaviour
 
     private void UpdateTilemapVisual(int layer)
     {
-        Debug.Log("UpdateTilemapVisual was run!");
+        //Debug.Log("UpdateTilemapVisual was run!");
 
         foreach (GameObject tile in layers[layer])
         {

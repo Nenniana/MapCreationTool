@@ -71,9 +71,8 @@ public class Tilemap
         public TilemapObject.SaveObject[] tilemapObjectSaveObjectArray;
     }
 
-    public SaveObject Save ()
+    public SaveObject SaveForScriptable ()
     {
-
         List<TilemapObject.SaveObject> tilemapObjectSaveObjectList = new List<TilemapObject.SaveObject>();
 
         for (int x = 0; x < gridBase.GetWidth(); x++)
@@ -85,26 +84,25 @@ public class Tilemap
             }
         }
 
-        return new SaveObject 
-        { 
-            tilemapObjectSaveObjectArray = tilemapObjectSaveObjectList.ToArray(), 
-            layer = gridBase.GetLayer(), 
-            height = gridBase.GetHeight(), 
+        return new SaveObject
+        {
+            tilemapObjectSaveObjectArray = tilemapObjectSaveObjectList.ToArray(),
+            layer = gridBase.GetLayer(),
+            height = gridBase.GetHeight(),
             width = gridBase.GetWidth(),
             cellSizeX = gridBase.GetCellSizeX(),
             cellSizeY = gridBase.GetCellSizeY(),
             location = gridBase.GetOriginPosition()
         };
-
     }
 
-    public void Load (SaveObject saveObject)
+    public void LoadScriptable(ScriptableRoomTemplate.RoomLayer saveObject)
     {
-        foreach (TilemapObject.SaveObject tilemapObjectSaveObject in saveObject.tilemapObjectSaveObjectArray) 
+        foreach (var tilemapObjectSaveObject in saveObject.roomTiles)
         {
-            
+
             TilemapObject tilemapObject = gridBase.GetGridObject(tilemapObjectSaveObject.x, tilemapObjectSaveObject.y);
-            tilemapObject.Load(tilemapObjectSaveObject);
+            tilemapObject.LoadScriptable(tilemapObjectSaveObject);
             gridBase.TriggerGridBaseObjectChanged(tilemapObjectSaveObject.x, tilemapObjectSaveObject.y);
         }
 

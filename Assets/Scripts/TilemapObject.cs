@@ -61,9 +61,11 @@ public class TilemapObject
         };
     }
 
-    public void Load(SaveObject saveObject)
+    public void LoadScriptable(ScriptableRoomTemplate.RoomTile roomTile)
     {
-        sprite = saveObject.sprite;
-        sOName = saveObject.sOName;
+        Debug.Log("TilemapObject Load function ran.");
+
+        sprite = roomTile.sprite;
+        sOName = roomTile.sOName;
     }
 }

@@ -7,11 +7,11 @@ public abstract class ScriptableTileBase : ScriptableObject
     [SerializeField]
     private string prefabName;
     [SerializeField]
+    private GameObject prefabObject;
+    [SerializeField]
     private Sprite prefabSprite;
     [SerializeField]
     private string description = "Fill me!";
-    [SerializeField]
-    private bool canBuild = false;
     [SerializeField]
     internal TileType prefabType;
 
@@ -23,6 +23,11 @@ public abstract class ScriptableTileBase : ScriptableObject
     public string GetPrefabName()
     {
         return prefabName;
+    }
+
+    public GameObject GetPrefabObject()
+    {
+        return prefabObject;
     }
 
     public Sprite GetPrefabSprite()

@@ -6,6 +6,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEditor;
 
 public class Testing : MonoBehaviour
 {
@@ -64,7 +65,7 @@ public class Testing : MonoBehaviour
         {
             Debug.Log("Scene reset.");
             
-            Load(LoadFileName.LoadName);
+            LoadScriptable(LoadFileName.LoadName);
         }
             
         else
@@ -143,45 +144,33 @@ public class Testing : MonoBehaviour
         }
     }
 
-    [Serializable]
-    public class SaveObject
-    {
-        public Tilemap.SaveObject[] tilemapArray;
-    }
 
-    public void Save ()
+    public void SaveScriptable()
     {
-        List<Tilemap.SaveObject> tilemapList = new List<Tilemap.SaveObject>();
+        ScriptableRoomTemplate scriptableRoomTemplate = ScriptableObject.CreateInstance("ScriptableRoomTemplate") as ScriptableRoomTemplate;
 
-        foreach (KeyValuePair<int, Tilemap>  tilemap in tilemaps)
+        scriptableRoomTemplate.init(text.text, gridHeight, gridWidth, gridCellSizeX, gridCellSizeY);
+
+        foreach (KeyValuePair<int, Tilemap> tilemap in tilemaps)
         {
-            tilemapList.Add(tilemap.Value.Save());
+            scriptableRoomTemplate.AddLayer(tilemap.Value.SaveForScriptable());
         }
 
-        SaveObject saveObject = new SaveObject
-        {
-            tilemapArray = tilemapList.ToArray()
-        };
-
-        SaveSystem.SaveObject(saveObject, text.text);
+        AssetDatabase.CreateAsset(scriptableRoomTemplate, "Assets/Resources/Saves/" + text.text + ".asset");
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
     }
 
-    public void Load(string load)
+    public void LoadScriptable(string saveName)
     {
         Debug.Log("Loaded!");
-        SaveObject saveObject;
 
-        Debug.Log(load);
+        ScriptableRoomTemplate scriptableRoomTemplate = SODatabase.GetSaveByName(saveName);
 
-        if (string.IsNullOrEmpty(load) || load == "Select file to ")
-            saveObject = SaveSystem.LoadMostRecentObject<SaveObject>();
-        else
-            saveObject = SaveSystem.LoadObject<SaveObject>(load);
-
-        foreach (Tilemap.SaveObject tilemapSaveObject in saveObject.tilemapArray)
+        foreach (var tilemapSaveObject in scriptableRoomTemplate.roomLayers)
         {
-            Tilemap tilemap = SetUpTilemap(tilemapSaveObject.width, tilemapSaveObject.height, tilemapSaveObject.cellSizeX, tilemapSaveObject.cellSizeY, tilemapSaveObject.location, tilemapSaveObject.layer);
-            tilemap.Load(tilemapSaveObject);
+            Tilemap tilemap = SetUpTilemap(scriptableRoomTemplate.roomWidth, scriptableRoomTemplate.roomHeight, scriptableRoomTemplate.roomCellSizeX, scriptableRoomTemplate.roomCellSizeY, tilemapSaveObject.location, tilemapSaveObject.layer);
+            tilemap.LoadScriptable(tilemapSaveObject);
         }
     }
 
@@ -195,7 +184,7 @@ public class Testing : MonoBehaviour
 
     private void SetLoadDropDown()
     {
-        dropdown.AddOptions(SaveSystem.GetSavedFileNames());
+        dropdown.AddOptions(SODatabase.GetAllSaveNames());
     }
 
     private void Update()
@@ -215,14 +204,15 @@ public class Testing : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.S))
             {
-                Save();
+                //Save();
+                SaveScriptable();
                 Debug.Log("Saved!");
             }
 
             if (Input.GetKeyDown(KeyCode.L))
             {
                 Debug.Log("dropdown.options[dropdownValue].text " + dropdown.options[dropdown.value].text);
-                LoadFileName.LoadName = dropdown.options[dropdown.value].text.Substring(0, dropdown.options[dropdown.value].text.Length - 4);
+                LoadFileName.LoadName = dropdown.options[dropdown.value].text;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
 
