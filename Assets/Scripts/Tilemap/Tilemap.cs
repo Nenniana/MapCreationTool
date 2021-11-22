@@ -100,10 +100,12 @@ public class Tilemap
     {
         foreach (var tilemapObjectSaveObject in saveObject.roomTiles)
         {
-
-            TilemapObject tilemapObject = gridBase.GetGridObject(tilemapObjectSaveObject.x, tilemapObjectSaveObject.y);
-            tilemapObject.LoadScriptable(tilemapObjectSaveObject);
-            gridBase.TriggerGridBaseObjectChanged(tilemapObjectSaveObject.x, tilemapObjectSaveObject.y);
+            if (tilemapObjectSaveObject.sOName != "")
+            {
+                TilemapObject tilemapObject = gridBase.GetGridObject(tilemapObjectSaveObject.x, tilemapObjectSaveObject.y);
+                tilemapObject.LoadScriptable(tilemapObjectSaveObject);
+                gridBase.TriggerGridBaseObjectChanged(tilemapObjectSaveObject.x, tilemapObjectSaveObject.y);
+            }
         }
 
         OnLoaded?.Invoke(this, EventArgs.Empty);

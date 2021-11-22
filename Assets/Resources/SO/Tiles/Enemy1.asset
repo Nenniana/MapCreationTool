@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d89ac843e647bc49af5c3452e7c1b86, type: 3}
-  m_Name: Wall Left
+  m_Script: {fileID: 11500000, guid: 95f1a31df92a37c43af4211a6d4665cf, type: 3}
+  m_Name: Enemy1
   m_EditorClassIdentifier: 
-  prefabName: Wall Left
+  prefabName: Enemy1
   prefabObject: {fileID: 0}
-  prefabSprite: {fileID: 2790443238121472926, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+  prefabSprite: {fileID: -9105062404301918196, guid: 27d1c4ad794e435448ee49f828b1f8f3, type: 3}
   description: Fill me!
-  prefabType: 1
+  prefabType: 3

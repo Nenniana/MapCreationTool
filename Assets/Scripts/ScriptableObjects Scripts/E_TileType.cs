@@ -1,10 +1,11 @@
 
 public enum TileType
 {
-    Default,
-    Start,
-    End,
-    Path,
-    Available,
-    Unavailable
+    Floor,
+    Wall,
+    Interactable,
+    Enemy,
+    Door,
+    Breakable,
+    Chest
 }

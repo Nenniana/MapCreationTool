@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d89ac843e647bc49af5c3452e7c1b86, type: 3}
   m_Name: Wall Right
   m_EditorClassIdentifier: 
-  prefabName: Right Wall
+  prefabName: Wall Right
   prefabObject: {fileID: 0}
   prefabSprite: {fileID: -6776621930668927898, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
   description: Fill me!

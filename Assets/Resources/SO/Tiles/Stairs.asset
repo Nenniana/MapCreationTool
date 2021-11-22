@@ -16,4 +16,4 @@ MonoBehaviour:
   prefabObject: {fileID: 0}
   prefabSprite: {fileID: -6885478022571243130, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
   description: Fill me!
-  prefabType: 0
+  prefabType: 2

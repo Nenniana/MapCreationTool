@@ -1,0 +1,1070 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f88d574d5a7df4194d17c2436cc062, type: 3}
+  m_Name: Start1911Test
+  m_EditorClassIdentifier: 
+  roomName: Start1911Test
+  roomType: 2
+  roomDescription: Fill me!
+  roomLayers:
+  - layer: 1
+    location: {x: 0, y: 0}
+    roomTiles:
+    - sprite: {fileID: 1572457179269059442, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Corner Right
+      x: 0
+      y: 0
+      dialogues: []
+    - sprite: {fileID: 2790443238121472926, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Left
+      x: 0
+      y: 1
+      dialogues: []
+    - sprite: {fileID: 2790443238121472926, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Left
+      x: 0
+      y: 2
+      dialogues: []
+    - sprite: {fileID: 2790443238121472926, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Left
+      x: 0
+      y: 3
+      dialogues: []
+    - sprite: {fileID: 2790443238121472926, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Left
+      x: 0
+      y: 4
+      dialogues: []
+    - sprite: {fileID: 2790443238121472926, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Left
+      x: 0
+      y: 5
+      dialogues: []
+    - sprite: {fileID: 2790443238121472926, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Left
+      x: 0
+      y: 6
+      dialogues: []
+    - sprite: {fileID: 2790443238121472926, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Left
+      x: 0
+      y: 7
+      dialogues: []
+    - sprite: {fileID: 2790443238121472926, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Left
+      x: 0
+      y: 8
+      dialogues: []
+    - sprite: {fileID: 2790443238121472926, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Left
+      x: 0
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 2790443238121472926, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Left
+      x: 0
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 1
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 1
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 1
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 1
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 1
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 1
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 1
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 1
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 1
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 1
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 1
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 2
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 2
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 2
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 2
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 2
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 2
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 2
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 2
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 2
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 2
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 2
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 3
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 3
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 3
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 3
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 3
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 3
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 3
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 3
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 3
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 3
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 3
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 4
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 4
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 4
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 4
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 4
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 4
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 4
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 4
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 4
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 4
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 4
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 5
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 5
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 5
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 5
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 5
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 5
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 5
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 5
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 5
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 5
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 5
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 6
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 6
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 6
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 6
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 6
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 6
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 6
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 6
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 6
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 6
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 6
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 7
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 7
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 7
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 7
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 7
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 7
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 7
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 7
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 7
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 7
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 7
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 8
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 8
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 8
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 8
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 8
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 8
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 8
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 8
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 8
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 8
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 8
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 9
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 9
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 9
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 9
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 9
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 9
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 9
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 9
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 9
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 9
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 9
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 10
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 10
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 10
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 10
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 10
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 10
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 10
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 10
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 10
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 10
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 10
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 11
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 11
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 11
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 11
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 11
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 11
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 11
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 11
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 11
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 11
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 11
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 12
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 12
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 12
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 12
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 12
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 12
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 12
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 12
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 12
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 12
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 12
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 13
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 13
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 13
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 13
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 13
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 13
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 13
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 13
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 13
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 13
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 13
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 14
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 14
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 14
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 14
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 14
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 14
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 14
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 14
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 14
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 14
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 14
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 15
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 15
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 15
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 15
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 15
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 15
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 15
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 15
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 15
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 15
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 15
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 16
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 16
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 16
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 16
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 16
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 16
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 16
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 16
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 16
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 16
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 16
+      y: 10
+      dialogues: []
+    - sprite: {fileID: 8368841442441016621, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Bottom
+      x: 17
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 17
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 17
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 17
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 17
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 17
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 17
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 17
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 17
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -1346270395945626171, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Floor
+      x: 17
+      y: 9
+      dialogues: []
+    - sprite: {fileID: 3908085889508201667, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Top
+      x: 17
+      y: 10
+      dialogues: []
+    - sprite: {fileID: -3049090555440275726, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Corner Left
+      x: 18
+      y: 0
+      dialogues: []
+    - sprite: {fileID: -6776621930668927898, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Right
+      x: 18
+      y: 1
+      dialogues: []
+    - sprite: {fileID: -6776621930668927898, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Right
+      x: 18
+      y: 2
+      dialogues: []
+    - sprite: {fileID: -6776621930668927898, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Right
+      x: 18
+      y: 3
+      dialogues: []
+    - sprite: {fileID: -6776621930668927898, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Right
+      x: 18
+      y: 4
+      dialogues: []
+    - sprite: {fileID: -6776621930668927898, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Right
+      x: 18
+      y: 5
+      dialogues: []
+    - sprite: {fileID: -6776621930668927898, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Right
+      x: 18
+      y: 6
+      dialogues: []
+    - sprite: {fileID: -6776621930668927898, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Right
+      x: 18
+      y: 7
+      dialogues: []
+    - sprite: {fileID: -6776621930668927898, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Right
+      x: 18
+      y: 8
+      dialogues: []
+    - sprite: {fileID: -6776621930668927898, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Right
+      x: 18
+      y: 9
+      dialogues: []
+    - sprite: {fileID: -6776621930668927898, guid: 8afa9547ffba3f445b36fdd1d50568e6, type: 3}
+      sOName: Wall Right
+      x: 18
+      y: 10
+      dialogues: []
+  roomHeight: 11
+  roomWidth: 19
+  roomCellSizeX: 10
+  roomCellSizeY: 10

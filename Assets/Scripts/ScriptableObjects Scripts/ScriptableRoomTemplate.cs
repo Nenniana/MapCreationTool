@@ -18,7 +18,6 @@ public class ScriptableRoomTemplate : ScriptableObject
     [Serializable]
     public class RoomLayer
     {
-
         public int layer;
         public Vector2 location;
         public List<RoomTile> roomTiles = new List<RoomTile>();
@@ -37,6 +36,22 @@ public class ScriptableRoomTemplate : ScriptableObject
         public string sOName;
         public int x;
         public int y;
+        [SerializeField]
+        Dialogue[] dialogues;
+        public bool canInteractDialogue
+        {
+            get
+            {
+                if (dialogues.Length != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
 
         public RoomTile(string name, Sprite sprite, int x, int y)
         {
@@ -62,13 +77,15 @@ public class ScriptableRoomTemplate : ScriptableObject
             roomLayers = new List<RoomLayer>();
 
         RoomLayer currentRoomLayer = new RoomLayer(saveObject.layer, saveObject.location);
-
         List<RoomTile> tileList = new List<RoomTile>();
 
         foreach (var tilemap in saveObject.tilemapObjectSaveObjectArray)
         {
-            RoomTile currentTile = new RoomTile(tilemap.sOName, tilemap.sprite, tilemap.x, tilemap.y);
-            tileList.Add(currentTile);
+            if (!String.IsNullOrWhiteSpace(tilemap.sOName))
+            {
+                RoomTile currentTile = new RoomTile(tilemap.sOName, tilemap.sprite, tilemap.x, tilemap.y);
+                tileList.Add(currentTile);
+            }
         }
 
         currentRoomLayer.roomTiles = tileList;

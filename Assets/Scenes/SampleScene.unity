@@ -1555,8 +1555,8 @@ MonoBehaviour:
   tMPro: {fileID: 1921571118}
   dropdown: {fileID: 217326510}
   text: {fileID: 839913014}
-  gridWidth: 17
-  gridHeight: 9
+  gridWidth: 19
+  gridHeight: 11
   gridCellSizeX: 10
   gridCellSizeY: 10
   layerPadding: 10
