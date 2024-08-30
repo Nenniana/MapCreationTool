@@ -23,7 +23,7 @@ public class TilemapObject
         this.sOName = sOName;
         this.sprite = sprite;
         gridBase.TriggerGridBaseObjectChanged(x, y);
-        Debug.Log("This is: " + x + " " + y);
+        // Debug.Log("This is: " + x + " " + y);
     }
 
     public Sprite GetSprite ()
@@ -50,7 +50,7 @@ public class TilemapObject
 
     public SaveObject Save()
     {
-        Debug.Log("TilemapObject Save function ran.");
+        // Debug.Log("TilemapObject Save function ran.");
 
         return new SaveObject
         {
@@ -63,7 +63,7 @@ public class TilemapObject
 
     public void LoadScriptable(ScriptableRoomTemplate.RoomTile roomTile)
     {
-        Debug.Log("TilemapObject Load function ran.");
+        // Debug.Log("TilemapObject Load function ran.");
 
         sprite = roomTile.sprite;
         sOName = roomTile.sOName;

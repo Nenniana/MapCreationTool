@@ -22,9 +22,9 @@ public class TileButtonFactory : MonoBehaviour
             foreach (ScriptableTileBase scriptableTileBase in entry.Value)
             {
                 //Debug.Log("Type:" + scriptableTileBase.GetTileType());
-                GameObject currentButton = Instantiate(button);
-                currentButton.transform.SetParent(this.transform);
+                GameObject currentButton = Instantiate(button, transform);
                 currentButton.GetComponent<TileButton>().InitButton(scriptableTileBase.GetPrefabSprite(), scriptableTileBase.GetPrefabAbbr(), scriptableTileBase.GetPrefabName());
+
             }
         }
     }
