@@ -1,6 +1,6 @@
 # Tile Map Creation Tool
 
-This Unity project was developed as a personal tool to streamline the creation of maps for my own game prototypes. It was later utilized in the development of the group project game "I Am Happy," which can be viewed [here](https://salomes-crescent.itch.io/i-am-happy).
+This Unity project was developed as a personal tool to streamline the creation of maps for my own game prototypes. It was later utilized in the development of the group project game "I Am Happy," which can be played on [itch.io](https://salomes-crescent.itch.io/i-am-happy).
 
 ## Overview
 
