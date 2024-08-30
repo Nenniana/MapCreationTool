@@ -1,5 +1,7 @@
 # Tile Map Creation Tool
 
+![Map Creation Tool Heart Demonstration](./READMEAssets/MapCreationToolDemonstration_Heart.gif)
+
 This Unity project was developed as a personal tool to streamline the creation of maps for my own game prototypes. It was later utilized in the development of the group project game "I Am Happy," which can be played on [itch.io](https://salomes-crescent.itch.io/i-am-happy).
 
 ## Overview
@@ -12,6 +14,8 @@ The Tile Map Creation Tool functions similarly to Unity’s Tile Palette, with t
 - **Prefab and ScriptableObject Integration**: Logic is separated into prefabs, while data is managed through scriptable objects, enabling easy modifications and reuse.
 - **Multi-Layered Layouts**: Supports multiple layout layers to manage render priority and collision properties.
 - **Automated Entity Assembly**: Upon loading a map, prefabs and scriptable objects are automatically combined to form complete entities.
+
+![Map Creation Tool Loading Demonstration](./READMEAssets/MapCreationToolDemonstration_Loading.gif)
 
 ## Potential Enhancements
 
