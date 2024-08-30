@@ -1732,7 +1732,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 20, y: 20}
-  m_SizeDelta: {x: 400, y: 200}
+  m_SizeDelta: {x: 400, y: 320}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1236266515
 MonoBehaviour:
@@ -1754,11 +1754,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Change Brush size with; ''<b>1</b>'', ''<b>2</b>'', ''<b>3</b>'' and ''<b>4</b>''.
-    Paint everything with selected tile with: ''<b>A</b>''. Make new layer with ''<b>N</b>''
-    and change between layers with ''<b>C</b>''. Save with ''<b>S</b>'' and Load
-    most recent save with ''<b>L</b>''. ''<b>R</b>'' to delete everything. ''<b>H</b>''
-    to hide debug-text.'
+  m_text: "'<b>1</b>', '<b>2</b>', '<b>3</b>' and '<b>4</b>' to change brush size.
+    \n'<b>A</b>' to paint everything with selected tile. \n'<b>N</b>' to make new
+    layer.\n'<b>C</b>' to change between layers. \n'<b>S</b>' to save.\n'<b>L</b>'
+    to load most recent or selected.\n'<b>R</b>' to delete everything. \n'<b>H</b>'
+    to hide debug-text."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 117439cf6c17ffe4abba8df7b91cd100, type: 2}
   m_sharedMaterial: {fileID: 3518786219600072181, guid: 117439cf6c17ffe4abba8df7b91cd100, type: 2}
@@ -1785,7 +1785,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.45
+  m_fontSize: 27.35
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
