@@ -24,3 +24,7 @@ The Tile Map Creation Tool functions similarly to Unity’s Tile Palette, with t
 ## Sample Scene
 
 The project includes a sample scene featuring pre-made tiles and maps to demonstrate the tool's capabilities. While the project does not include functionality for playing the created maps within the tool itself, some of the included maps can be seen in action within the "I Am Happy" project.
+
+## Sprite Notes
+
+The beautiful sprites used in the project were not made by me, and were downloaded from a now-defunct itch.io page. If anyone has information of the original designer, kindly contact me.
